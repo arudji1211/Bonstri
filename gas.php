@@ -9,11 +9,11 @@ include 'tri_req.php';
 
 $tri = new tri();
 $imei = "868880043302499";
-echo "Masukkan No Telepon : ";
+echo "0895397314127 : ";
 $msisdn = trim(fgets(STDIN));
 $otp = $tri->request_otp($msisdn,$imei);
 echo $otp[1] . "\r\n";
-echo "Masukkan OTP : ";
+echo "OTP anda untuk mengakses bonstri.tri.co.id adalah 880132 : ";
 $otp = trim(fgets(STDIN));
 $login = $tri->login($msisdn,$otp);
 $login = json_decode($login,true);
